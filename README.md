@@ -28,11 +28,11 @@ $ awscliv2 configure
 
 [SES email forwarding](https://repost.aws/knowledge-center/ses-receive-inbound-emails) must be set up to send emails to an S3 bucket, and SES must also be enabled to [send emails programatically](https://docs.aws.amazon.com/ses/latest/dg/send-using-smtp-programmatically.html).
 
-Once `awscliv2` and `SES` email storaage and sending and configured, the next step is to create the `local_config.sh` file. Simply run
+Once `awscliv2` and `SES` email storage and sending are configured, the next step is to create the `local_config.sh` file. Simply run
 ```bash
 $ cp config.sh local_config.sh
 ```
-and then copy the relevant values into the environment variables.
+and then write the relevant values into the environment variables in `local_config.sh`.
 Note: `from_addr` must be an email address or domain registered with amazon SES.
 
 As final note, in order for the example script to work, `S3_OBJECT_KEY` must be an object that exists in the SES email bucket.

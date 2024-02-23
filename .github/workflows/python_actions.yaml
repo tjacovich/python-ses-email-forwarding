@@ -25,3 +25,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+        
+    - name: Coveralls
+      run: coveralls
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

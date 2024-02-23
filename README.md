@@ -1,6 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/tjacovich/python-ses-email-forwarding/badge.svg?branch=main)](https://coveralls.io/github/tjacovich/python-ses-email-forwarding?branch=main)
-[![Python CI actions](https://github.com/tjacovich/python-ses-email-forwarding/actions/workflows/python_actions.yaml/badge.svg?branch=main)](https://github.com/tjacovich/python-ses-email-forwarding/actions/workflows/python_actions.yaml)
-
+[![Python CI actions](https://github.com/tjacovich/python-ses-email-forwarding/actions/workflows/python_actions.yaml/badge.svg)](https://github.com/tjacovich/python-ses-email-forwarding/actions/workflows/python_actions.yaml)
 
 ## SES Email Forwarder
 

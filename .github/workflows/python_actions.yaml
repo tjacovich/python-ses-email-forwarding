@@ -16,7 +16,7 @@ jobs:
         python-version: 3.11
     - name: set pythonpath
       run: |
-        echo "PYTHONPATH=home/runner/work/python-ses-email-forwarding/python-ses-email-forwarding/" >> $GITHUB_ENV
+        echo "PYTHONPATH=/home/runner/work/python-ses-email-forwarding/python-ses-email-forwarding/" >> $GITHUB_ENV
     - name: Install dependencies
       run: |
         pip install -r requirements.txt

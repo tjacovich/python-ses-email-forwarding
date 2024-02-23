@@ -1,0 +1,53 @@
+Return-Path: <example-sender@example.com>
+Received: from mail-qv1-f53.sender-server.com (mail-qv1-f53.sender-server.com [1.2.3.4])
+ by inbound-smtp.aws-region-X.amazonaws.com with SMTP id placeholderid
+ for example-receipient@custom-domain.com;
+ Sun, 11 Feb 2024 20:11:11 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of _spf.sender-server.com designates 1.2.3.4 as permitted sender) client-ip=1.2.3.4; envelope-from=example-sender@example.com; helo=mail-qv1-f53.sender-server.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of _spf.sender-server.com designates 1.2.3.4 as permitted sender) client-ip=1.2.3.4; envelope-from=example-sender@example.com; helo=mail-qv1-f53.sender-server.com;
+ dkim=pass header.i=@sender-email-domain.com;
+ dmarc=pass header.from=sender-email-domain.com;
+X-SES-RECEIPT: placeholdersignature
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=placeholderb; c=relaxed/simple; s=placeholders; d=amazonses.com; t=placeholdert; v=1; bh=placeholderbh; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Received: by mail-qv1-f53.sender-server.com with SMTP id placeholderid
+        for <example-receipient@custom-domain.com>; Sun, 11 Feb 2024 12:11:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=sender-email-domain.com; s=placeholders; t=placeholdert; x=placeholderx; darn=custom-domain.com;
+        h=to:message-id:subject:date:mime-version:from
+         :content-transfer-encoding:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=placeholderbh;
+        b=placeholderb
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=placeholders; t=placeholdert; x=placeholderx;
+        h=to:message-id:subject:date:mime-version:from
+         :content-transfer-encoding:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=placeholderbh;
+        b=placeholderb
+X-Gm-Message-State: line1
+	line2
+X-Google-Smtp-Source: line1
+X-Received: by placeholder with SMTP id placeholderid;
+        Sun, 11 Feb 2024 12:11:10 -0800 (PST)
+Return-Path: <example-sender@example.com>
+Received: from smtpclient.client ([0.0.0.0])
+        by smtp.sender-email-domain.com with ESMTPSA id placeholderid
+        for <example-receipient@custom-domain.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 11 Feb 2024 12:11:10 -0800 (PST)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+From: Full Name <example-sender@example.com>
+Mime-Version: 1.0 (1.0)
+Date: Sun, 11 Feb 2024 15:10:59 -0500
+Subject: Test
+Message-Id: <placeholder@sender-email-domain.com>
+To: example-receipient@custom-domain.com
+X-Mailer: EXAMPLE MAILER (XXXX)
+
+
+Test 
